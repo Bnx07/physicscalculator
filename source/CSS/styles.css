@@ -75,6 +75,8 @@ footer p{
     width: 90%;
     height: 80%;
     flex-wrap: wrap;
+
+    transition: 2s ease-out;
 }
 
 #indice-botones button {
@@ -122,7 +124,8 @@ footer p{
 
 #aplicar-cambios {
     width: 40%;
-    height: 20%;
+    min-height: 20%;
+    height: fit-content;
     background-color: var(--MY-orange-shiny);
     border: 2px solid var(--MY-orange-strong);
     border-radius: 6em;
@@ -180,21 +183,84 @@ input[type=number]::-webkit-outer-spin-button {
     h1, .titulo {
         font-size: 22px;
     }
+
+    #input-inputs p {
+        font-size: 16px;
+        margin-top: 2%;
+    }
+
+    .input-inputs-input {
+        height: 15%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #function-type {
+        display: flex;
+        justify-content: center;
+    }
+
+    #input-inputs p {
+        font-size: 16px;
+        margin-top: 1%;
+    }
+
+    #input-zone h1 {
+        margin-bottom: 0;
+    }
+
+    #input-zone .titulo {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 1025px) {
     /* SE HARA LUEGO */
+
+    /* SEGUIR EN 2x2 Y CUANDO SE ABRE INPUT/FUNCTYPE SE MINIMIZA EL OTRO */
+
+    /* ACHICAR UN POCO FONT-SIZE Y EXTENDER RESULTADOS.WIDTH*/
+
+    /* TIPO DE FUNCION VA EN LISTA */
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
     /* SE HARA LUEGO X2 */
     #main {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: fit-content;
+        min-height: 90vh;
     }
 
+    .indice, .input-zone, .return-zone {
+        display: flex;
+        align-items: center;
+        border-radius: 3em;
+        padding: 3%;
+        width: 80%;
+    }
+
+    #indice-botones button {
+        margin-bottom: 2%;
+    }
+
+    .return-zone p {
+        font-size: 18px;
+    }
+
+    .number-return {
+        height: 7vh;
+        width: 50%;
+        font-size: 16px;
+        display: flex;
+        margin-bottom: 1vh;
+    }
+
+    footer p {
+        width: 100%;
+    }
 }
 
 @media (max-width: 481px) {
