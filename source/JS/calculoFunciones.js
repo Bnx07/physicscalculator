@@ -215,13 +215,16 @@ function clsDivs() {
 function displayFuncTypes() {
     if (screen.width <= 481) {
         if (indiceZone.style.display == "flex") {
+            indiceZone.style.transition = '2s all ease';
             indiceZone.style.display = "none";
             indiceZone.style.height = "0px";
         } else {
+            indiceZone.style.transition = '2s all ease';
             indiceZone.style.display = "flex";
             indiceZone.style.height = "fit-content";
         }
     } else {
+        indiceZone.style.transition = '2s all ease';
         indiceZone.style.display = "flex";
         indiceZone.style.height = "80%";
     }
